@@ -20,7 +20,7 @@ export default {
     name:'UserCommentsCard',
          props: {
                 Comments: {
-                type: Object,
+                type: Array,
                  required: true
                 }                
             }

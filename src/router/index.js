@@ -54,10 +54,40 @@ const routes = [
     component: () => import('../views/UsersTop.vue')
   },
   {
+    path: '/user/:id/edit',
+    name: 'admin-user-edit',
+    component: () => import('../views/UserEdit.vue')
+  }, 
+  {
     path: '/user/:id',
     name: 'user',
     component: () => import('../views/User.vue')
   },
+  {
+    path: '/admin',
+    exact: true,
+    redirect: '/admin/restaurants'
+  },
+  {
+    path: '/admin/restaurants',
+    name: 'admin-restaurants',
+    component: () => import('../views/AdminRestaurants.vue')
+  },
+  {
+    path: '/admin/restaurants/new',
+    name: 'admin-restaurant-new',
+    component: () => import('../views/AdminRestaurantNew.vue')
+  },  
+  {
+    path: '/admin/restaurants/:id/edit',
+    name: 'admin-restaurant-edit',
+    component: () => import('../views/AdminRestaurantEdit.vue')
+  },   
+  {
+    path: '/admin/restaurants/:id',
+    name: 'admin-restaurant',
+    component: () => import('../views/AdminRestaurant.vue')
+  },  
   {
     path: '*',
     name: 'not-found',

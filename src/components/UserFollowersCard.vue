@@ -24,7 +24,7 @@ export default {
     name:'UserFollowersCard',  
      props: {
                 Followers: {
-                type: Object,
+                type: Array,
                  required: true
                 }                
             }
